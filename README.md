@@ -1,0 +1,2 @@
+# hachiue_docs
+植物擬人化栽培アプリHACHIUEのドキュメント
