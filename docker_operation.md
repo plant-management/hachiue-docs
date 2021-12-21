@@ -11,8 +11,8 @@ Docker を用いて開発環境を構築する方法について書かれたド�
 始めにDockerとリポジトリの準備を行います。
 
 1. Dockerの準備を行います。
-   - `docker`コマンドと`docker-compose`コマンドが動くようにします。Dockerの[公式サイト](https://docs.docker.com/get-docker/)などを見ながらインストールしたください。
-   - VSCode の拡張機能の Remote - Containers (または Remote Development) と Docker(← 拡張機能名です)をインストールします。VSCodeの左タブのExtentions（拡張機能）からそれぞれ検索してインストールしましょう。
+   1. `docker`コマンドと`docker-compose`コマンドが動くようにします。Dockerの[公式サイト](https://docs.docker.com/get-docker/)などを見ながらインストールしたください。
+   2. VSCode の拡張機能の Remote - Containers (または Remote Development) と Docker(← 拡張機能名です)をインストールします。VSCodeの左タブのExtentions（拡張機能）からそれぞれ検索してインストールしましょう。
 2. 任意のフォルダに移動後、下記コマンドで2つのリポジトリをクローンします。  
    - Mac or Linuxの場合
     ```
@@ -23,7 +23,11 @@ Docker を用いて開発環境を構築する方法について書かれたド�
     ```
     git clone --config core.autocrlf=false https://github.com/plant-management/hachiue-app.git
     git clone --config core.autocrlf=false https://github.com/plant-management/hachiue-backend.git
-    ```
+3. 動作確認に必要な.envファイルを準備します。
+   1. スマホで動作確認する場合に必要な設定です。スマホで動作確認する場合、**スマホとPCを同じネットワーク（ルータ）へ接続**することが必須です。学校でできるかは確認していないため、自宅で作業することを推奨します。
+   2. パソコンのIPv4アドレスを調べます。
+   3. 以下の画像のようにルートディレクトリに.envフォルダを作成し、`REACT_NATIVE_PACKAGER_HOSTNAME=***.***.***.***`のように記述します。
+   ![env_file](images/env_file.png)
 
 
 ## Rebuild 方法
