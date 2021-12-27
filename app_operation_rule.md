@@ -7,6 +7,25 @@
 パッケージをインストールした人以外はビルドし直す必要があります。また、パッケージをインストールした人もチェックアウトした際にはビルドし直す必要があります。（[Docker環境構築方法](./docker_operation.md)）  
 ※インストールし直しでもOKです
 
+## npm関連のコマンド
+パッケージインストール
+```
+npm install <パッケージ名>
+```
+
+パッケージアンインストール
+```
+npm uninstall <パッケージ名>
+```
+
+アプリ起動
+```
+npm start
+```
+
+アプリ起動中のコマンド  
+r：npm restart  
+w：Web版起動、[http://localhost:19006](http://localhost:19006)でアクセスできる
 
 ## ESLint, Prettier, standard
 ビルド時に全て自動で設定されているので特に設定することはありません。
@@ -23,7 +42,7 @@
 
 
 ## VSCodeの設定、拡張機能
-.devcontainerを設定しているため、VSCodeの設定や拡張機能はDocker Containerを建てると自動で適用されます。詳細は[devcontainer.json](https://github.com/plant-management/hachiue-app/blob/develop/.devcontainer/devcontainer.json)に書かれています。
+.devcontainerを設定しているため、VSCodeの設定や拡張機能はDocker Containerを建てると自動で適用されます。詳細はアプリの[devcontainer.json](https://github.com/plant-management/hachiue-app/blob/develop/.devcontainer/devcontainer.json)に書かれています。
 
 ### 設定 (settings)
 js, jsx, ts, tsxファイルは以下の設定が適用されます。
