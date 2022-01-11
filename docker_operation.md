@@ -24,7 +24,9 @@ Docker を用いて開発環境を構築する方法について書かれたド�
     ```
     git clone --config core.autocrlf=false https://github.com/plant-management/hachiue-app.git
     git clone --config core.autocrlf=false https://github.com/plant-management/hachiue-backend.git
-3. 動作確認に必要な.envファイルを準備します。
+3. クローンした2つのフォルダをそれぞれ開きます。
+   VSCodeの「フォルダを開く」でクローンしたhachiue-appとhachiue-backendを両方とも開きます。**VSCodeのRemote Containerを使う場合この手順は必須です。**
+4. 動作確認に必要な.envファイルを準備します。
    1. スマホで動作確認する場合に必要な設定です。スマホで動作確認する場合、**スマホとPCを同じネットワーク（ルータ）へ接続**することが必須です。学校でできるかは確認していないため、自宅で作業することを推奨します。
    2. パソコンのIPv4アドレスを調べます。
    3. 以下の画像のようにhachiue-appのルートディレクトリに.envフォルダを作成し、`REACT_NATIVE_PACKAGER_HOSTNAME=***.***.***.***`のように記述します。***は2で調べたIPアドレスです。
